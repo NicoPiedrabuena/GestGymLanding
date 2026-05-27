@@ -1,26 +1,6 @@
 // ========================================
-// Configuration
-// ========================================
-
-// TODO: Reemplazar mock por API real
-const API_URL = ''; // Configurar endpoint cuando esté disponible
-const CHAT_API_URL = ''; // Configurar endpoint de chat cuando esté disponible
-
-// ========================================
 // Utility Functions
 // ========================================
-
-/**
- * Get or create session ID for chat
- */
-function getSessionId() {
-    let sessionId = localStorage.getItem('chatSessionId');
-    if (!sessionId) {
-        sessionId = 'sess_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-        localStorage.setItem('chatSessionId', sessionId);
-    }
-    return sessionId;
-}
 
 /**
  * Get chat history from localStorage
@@ -57,7 +37,6 @@ function debounce(func, wait) {
 // ========================================
 
 const header = document.getElementById('header');
-let lastScroll = 0;
 
 window.addEventListener('scroll', debounce(() => {
     const currentScroll = window.pageYOffset;
@@ -67,8 +46,6 @@ window.addEventListener('scroll', debounce(() => {
     } else {
         header.classList.remove('scrolled');
     }
-
-    lastScroll = currentScroll;
 }, 10));
 
 // ========================================
@@ -290,6 +267,7 @@ const demoForm = document.getElementById('demoForm');
 const formFields = {
     name: document.getElementById('name'),
     email: document.getElementById('email'),
+    phone: document.getElementById('phone'),
     country: document.getElementById('country'),
     role: document.getElementById('role'),
     gymSize: document.getElementById('gymSize'),
@@ -311,6 +289,14 @@ document.querySelectorAll('[data-plan]').forEach(btn => {
 function isValidEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
+}
+
+/**
+ * Validate phone format (allows international prefixes and separators)
+ */
+function isValidPhone(phone) {
+    const digits = phone.replace(/\D/g, '');
+    return digits.length >= 8 && digits.length <= 15;
 }
 
 /**
@@ -349,7 +335,7 @@ function validateForm() {
 
     // Clear all errors
     Object.keys(formFields).forEach(key => {
-        if (key !== 'message' && key !== 'selectedPlan') {
+        if (key !== 'selectedPlan') {
             clearError(key);
         }
     });
@@ -369,6 +355,15 @@ function validateForm() {
         isValid = false;
     }
 
+    // Phone validation
+    if (!formFields.phone.value.trim()) {
+        showError('phone', 'Por favor ingresá tu celular');
+        isValid = false;
+    } else if (!isValidPhone(formFields.phone.value.trim())) {
+        showError('phone', 'Ingresá un celular válido (8 a 15 dígitos)');
+        isValid = false;
+    }
+
     // Country validation
     if (!formFields.country.value) {
         showError('country', 'Por favor seleccioná tu país');
@@ -384,6 +379,12 @@ function validateForm() {
     // Gym size validation
     if (!formFields.gymSize.value) {
         showError('gymSize', 'Por favor seleccioná el tamaño del gimnasio');
+        isValid = false;
+    }
+
+    // Message validation
+    if (!formFields.message.value.trim()) {
+        showError('message', 'Por favor contanos brevemente qué necesitás');
         isValid = false;
     }
 
@@ -419,7 +420,6 @@ demoForm.addEventListener('submit', async (e) => {
         const result = await response.json();
 
         if (result.success) {
-            console.log('Formulario enviado correctamente', result, formData);
             // Show success message
             alert('¡Gracias por tu interés! Nos contactaremos pronto.');
 
@@ -440,7 +440,7 @@ demoForm.addEventListener('submit', async (e) => {
 
 // Real-time validation on blur
 Object.keys(formFields).forEach(key => {
-    if (key !== 'message' && key !== 'selectedPlan') {
+    if (key !== 'selectedPlan') {
         formFields[key].addEventListener('blur', () => {
             if (formFields[key].value.trim()) {
                 clearError(key);
@@ -504,7 +504,6 @@ const chatSendBtn = document.getElementById('chatSendBtn');
 const chatTyping = document.getElementById('chatTyping');
 
 let chatHistory = getChatHistory();
-const sessionId = getSessionId();
 
 // Load chat history
 if (chatHistory.length > 0) {
@@ -635,31 +634,6 @@ async function sendMessage() {
     // Simulate delay
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 1000));
 
-    // TODO: Reemplazar con API real
-    // try {
-    //     const response = await fetch(CHAT_API_URL, {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({
-    //             message: message,
-    //             sessionId: sessionId,
-    //             timestamp: Date.now()
-    //         })
-    //     });
-    //     
-    //     if (!response.ok) {
-    //         throw new Error('Error en la respuesta del chat');
-    //     }
-    //     
-    //     const data = await response.json();
-    //     const botResponse = data.response;
-    // } catch (error) {
-    //     console.error('Chat error:', error);
-    //     const botResponse = 'Lo siento, hubo un error. Por favor intentá nuevamente.';
-    // }
-
     // Get mock response
     const botResponse = getMockResponse(message);
 
@@ -708,15 +682,3 @@ chatInput.addEventListener('input', () => {
 // ========================================
 // Initialize
 // ========================================
-
-console.log('GestGym Landing Page initialized');
-console.log('Session ID:', sessionId);
-console.log('Chat history loaded:', chatHistory.length, 'messages');
-
-// TODO: Integración con chatbot externo
-// Para integrar un chatbot externo, usar:
-// function initChatbot(config) {
-//     // config = { apiUrl, apiKey, widgetSettings, etc. }
-//     CHAT_API_URL = config.apiUrl;
-//     // Configurar widget según settings...
-// }

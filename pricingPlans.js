@@ -7,8 +7,8 @@ window.pricingPlans = [
         subtitulo: 'Para gimnasios en crecimiento',
         valor: {
             moneda: '$',
-            mensual: 30000,
-            anual: 300000,
+            mensual: 45000,
+            anual: 450000,
             periodoMensual: '/mes',
             periodoAnual: '/año'
         },
@@ -29,8 +29,8 @@ window.pricingPlans = [
         subtitulo: 'Para gimnasios establecidos',
         valor: {
             moneda: '$',
-            mensual: 50000,
-            anual: 500000,
+            mensual: 60000,
+            anual: 600000,
             periodoMensual: '/mes',
             periodoAnual: '/año'
         },
@@ -53,8 +53,8 @@ window.pricingPlans = [
         subtitulo: 'Para cadenas de gimnasios',
         valor: {
             moneda: '$',
-            mensual: 60000,
-            anual: 600000,
+            mensual: 70000,
+            anual: 700000,
             periodoMensual: '/mes',
             periodoAnual: '/año'
         },
@@ -67,26 +67,6 @@ window.pricingPlans = [
             'Soporte 24/7'
         ],
         ctaTexto: 'Empezar',
-        ctaEstilo: 'secondary',
-        destacada: false
-    },
-    {
-        nombre: 'instalacion',
-        titulo: 'Instalación Puerta',
-        subtitulo: 'Pago único (opcional)',
-        valor: {
-            moneda: '$',
-            unico: 300000,
-            periodoUnico: 'único'
-        },
-        cuerpo: [
-            'Puerta de acceso profesional',
-            'Instalación completa',
-            'Integración con software',
-            'Configuración inicial',
-            'Garantía de 12 meses'
-        ],
-        ctaTexto: 'Consultar',
         ctaEstilo: 'secondary',
         destacada: false
     }
