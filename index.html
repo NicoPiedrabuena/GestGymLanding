@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="GestGym: Sistema integral de gestión para gimnasios. Pagos, control de acceso, pantalla cliente, admin y supervisor. Reduce morosidad y mejora la retención.">
+    <meta name="keywords" content="gestión gimnasios, software gimnasio, pagos membresías, control acceso">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GestGym - Sistema Integral de Gestión para Gimnasios">
+    <meta property="og:description"
+        content="Gestioná tu gimnasio de punta a punta: pagos, control operativo, pantalla cliente, admin y supervisor. Sin planillas, sin complicaciones.">
+    <meta property="og:url" content="https://www.gestgym.com">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GestGym - Sistema Integral de Gestión para Gimnasios">
+    <meta name="twitter:description"
+        content="Gestioná tu gimnasio de punta a punta: pagos, control operativo, pantalla cliente, admin y supervisor.">
+
+    <title>GestGym - Sistema Integral de Gestión para Gimnasios</title>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GestGym",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Sistema integral de gestión para gimnasios con módulos de pagos, control de acceso, pantalla cliente, admin y supervisor.",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "49",
+        "highPrice": "199"
+      },
+      "url": "https://www.gestgym.com",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "127"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Loader removed -->
+
+    <!-- Header Sticky -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#hero" class="logo" aria-label="GestGym">
+                    <img src="logo-192.png" alt="Logo GestGym" class="logo-image">
+                </a>
+                <nav class="nav" id="nav">
+                    <a href="#features" class="nav-link">Características</a>
+                    <a href="#modules" class="nav-link">Módulos</a>
+                    <a href="#pricing" class="nav-link">Precios</a>
+                    <a href="#testimonials" class="nav-link">Testimonios</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </nav>
+                <a href="#demo" class="btn btn-primary">Agendar demo</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Gestioná tu gimnasio de punta a punta, sin planillas</h1>
+                    <p class="hero-subtitle">Control total de pagos, membresías, accesos y operaciones. Un sistema
+                        completo para dueños, admins y supervisores que quieren crecer sin complicaciones.</p>
+                    <div class="hero-ctas">
+                        <a href="#demo" class="btn btn-primary btn-lg">Agendar demo</a>
+                        <a href="#pricing" class="btn btn-secondary btn-lg">Ver precios</a>
+                    </div>
+                    <div class="hero-features">
+                        <div class="hero-feature">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Pagos y membresías</span>
+                        </div>
+                        <div class="hero-feature">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Pantalla cliente</span>
+                        </div>
+                        <div class="hero-feature">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Admin & Supervisor</span>
+                        </div>
+                        <div class="hero-feature">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Reportes en tiempo real</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="hero_dash.png" alt="Vista del dashboard de GestGym" class="hero-dashboard-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">-40%</div>
+                    <div class="stat-label">Morosidad</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">+35%</div>
+                    <div class="stat-label">Retención</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">15h</div>
+                    <div class="stat-label">Ahorro semanal</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">100+</div>
+                    <div class="stat-label">Socios activos</div>
+                </div>
+            </div>
+            <div class="brands">
+                <div class="brand-logo">Megasport</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Overview -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Todo lo que necesitás en un solo lugar</h2>
+                <p class="section-subtitle">Desde el primer contacto hasta reportes avanzados, GestGym cubre cada
+                    aspecto de la gestión de tu gimnasio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules -->
+    <section class="modules" id="modules">
+        <div class="container">
+            <div class="modules-grid">
+                <!-- Module 1: Pagos & Membresías -->
+                <div class="module-card reveal">
+                    <div class="module-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M2 10h20" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="module-title">Pagos & Membresías</h3>
+                    <p class="module-description">Cobrá cuotas, registrá pagos y gestioná vencimientos automáticamente.
+                        Recordatorios por email y WhatsApp para reducir la morosidad.</p>
+                    <ul class="module-list">
+                        <li>Registro de pagos manual y automático</li>
+                        <li>Planes flexibles (mensual, trimestral, anual)</li>
+                        <li>Recordatorios de vencimiento</li>
+                        <li>Integración con medios de pago</li>
+                    </ul>
+                </div>
+
+                <!-- Module 2: Pantalla Cliente -->
+                <div class="module-card reveal">
+                    <div class="module-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="module-title">Pantalla Cliente</h3>
+                    <p class="module-description">Mostrá en TV/recepción el estado de cada socio, avisos importantes,
+                        turnos y promociones en tiempo real.</p>
+                    <ul class="module-list">
+                        <li>Display para TV o monitor en recepción</li>
+                        <li>Estado de membresía al escanear</li>
+                        <li>Avisos y notificaciones personalizadas</li>
+                        <li>Próximas clases y disponibilidad</li>
+                    </ul>
+                </div>
+
+                <!-- Module 3: Panel Admin -->
+                <div class="module-card reveal">
+                    <div class="module-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M12 1v6M12 17v6M4.2 4.2l4.2 4.2M15.6 15.6l4.2 4.2M1 12h6M17 12h6M4.2 19.8l4.2-4.2M15.6 8.4l4.2-4.2"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="module-title">Panel Admin</h3>
+                    <p class="module-description">Configurá planes, usuarios, permisos y accesos. Control total sobre la
+                        operación desde un panel centralizado.</p>
+                    <ul class="module-list">
+                        <li>Gestión de socios y empleados</li>
+                        <li>Configuración de planes y precios</li>
+                        <li>Roles y permisos personalizados</li>
+                        <li>Reportes financieros y operativos</li>
+                    </ul>
+                </div>
+
+                <!-- Module 4: Panel Supervisor -->
+                <div class="module-card reveal">
+                    <div class="module-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="module-title">Panel Supervisor</h3>
+                    <p class="module-description">Seguimiento de operación diaria, asistencias, alertas de vencimientos
+                        y tareas pendientes para el equipo.</p>
+                    <ul class="module-list">
+                        <li>Dashboard de operación diaria</li>
+                        <li>Control de asistencia y accesos</li>
+                        <li>Alertas de vencimientos próximos</li>
+                        <li>Gestión de tareas del equipo</li>
+                    </ul>
+                </div>
+
+                <!-- Module 5: Control de Acceso -->
+                <div class="module-card reveal">
+                    <div class="module-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 17a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" />
+                            <path d="M8 11V7a4 4 0 118 0v4" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="module-title">Control de Acceso</h3>
+                    <p class="module-description">Controlá quién entra y cuándo. Instalamos la puerta de acceso y la
+                        integramos con torniquetes, lectores
+                        de tarjeta o códigos QR.</p>
+                    <ul class="module-list">
+                        <li>Instalación de puerta de acceso (opcional)</li>
+                        <li>Validación automática de membresía</li>
+                        <li>Registro de ingresos y egresos</li>
+                        <li>Alertas de accesos no autorizados</li>
+                        <li>Compatible con hardware estándar</li>
+                    </ul>
+                </div>
+
+                <!-- Module 6: Reportes y KPIs -->
+                <div class="module-card reveal">
+                    <div class="module-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 3v18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M18 9l-5 5-3-3-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="module-title">Reportes y KPIs</h3>
+                    <p class="module-description">Métricas en tiempo real: ingresos, retención, morosidad, asistencia
+                        promedio y más. Exportá a Excel o PDF.</p>
+                    <ul class="module-list">
+                        <li>Dashboard con KPIs clave</li>
+                        <li>Reportes de ingresos y gastos</li>
+                        <li>Análisis de retención y churn</li>
+                        <li>Exportación a Excel/PDF</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Empezá en 3 pasos simples</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Configurás planes y reglas</h3>
+                    <p class="step-description">Definí tus planes de membresía, precios, promociones y reglas de acceso
+                        en minutos.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Cargás socios o importás</h3>
+                    <p class="step-description">Agregá socios manualmente o importá desde Excel. Asignales planes y
+                        configurá pagos.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Cobrás, controlás y medís</h3>
+                    <p class="step-description">Operá tu gimnasio en piloto automático con recordatorios, accesos y
+                        reportes en tiempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Un plan para cada tamaño de gimnasio</h2>
+                <p class="section-subtitle">Sin permanencia. Sin costos ocultos. Soporte incluido.</p>
+            </div>
+
+            <!-- Pricing Toggle -->
+            <div class="pricing-toggle">
+                <span class="toggle-label">Mensual</span>
+                <button class="toggle-switch" id="pricingToggle" aria-label="Alternar entre mensual y anual">
+                    <span class="toggle-slider"></span>
+                </button>
+                <span class="toggle-label">Anual <span class="toggle-discount">2 meses gratis</span></span>
+            </div>
+
+            <div class="pricing-grid" id="pricingGrid"></div>
+
+            <p class="pricing-note">Todos los planes incluyen actualizaciones gratuitas y migración asistida</p>
+        </div>
+    </section>
+
+    <!-- Testimonials
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="testimonial-text">"Antes perdía horas en Excel controlando pagos. Con GestGym todo es
+                        automático: me avisa vencimientos, envía recordatorios y tengo reportes al instante. Reducimos
+                        la morosidad un 45%."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div>
+                            <div class="author-name">Martín Rodríguez</div>
+                            <div class="author-role">Dueño, FitZone</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="testimonial-text">"El panel de admin es súper intuitivo. Puedo gestionar 3 sedes desde un
+                        solo lugar, ver reportes consolidados y configurar todo sin llamar a soporte. La pantalla
+                        cliente es un plus que encanta a los socios."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LC</div>
+                        <div>
+                            <div class="author-name">Laura Castro</div>
+                            <div class="author-role">Administradora, PowerGym</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="testimonial-text">"Como supervisor, necesito ver en tiempo real quién ingresó, quién está
+                        por vencer y qué tareas tengo pendientes. GestGym me da toda esa info en un dashboard claro.
+                        Ahorro 15 horas por semana."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JS</div>
+                        <div>
+                            <div class="author-name">Javier Sosa</div>
+                            <div class="author-role">Supervisor, BodyFit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preguntas frecuentes</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Necesito instalar algo o es 100% web?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>GestGym es 100% web. Accedés desde cualquier navegador, en cualquier dispositivo. No hay nada
+                            que instalar ni actualizar manualmente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Puedo importar mi base de socios actual?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, podés importar tu base desde Excel. Te acompañamos en la migración sin cargo para que
+                            arranques sin perder datos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Implementamos pagos automáticos?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, nos integramos con MercadoPago.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Hay costo de implementación o setup?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, la configuración inicial y migración están incluidas sin cargo. Solo pagás la suscripción
+                            mensual o anual que elijas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Qué tipo de soporte recibo?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Todos los planes incluyen soporte. El plan Starter tiene email, Pro soporte prioritario, y
+                            Enterprise cuenta dedicada 24/7.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Puedo cambiar de plan en cualquier momento?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, podés upgradear o downgradear tu plan cuando quieras. Sin permanencia ni penalidades.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Form CTA -->
+    <section class="demo-cta" id="demo">
+        <div class="container">
+            <div class="demo-content">
+                <div class="demo-text">
+                    <h2 class="demo-title">Probá GestGym sin compromiso</h2>
+                    <p class="demo-subtitle">Agendá una demo personalizada y descubrí cómo GestGym puede transformar la
+                        gestión de tu gimnasio.</p>
+                    <ul class="demo-benefits">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Demo en vivo de 30 minutos
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Asesoramiento personalizado
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Sin compromiso de compra
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5491131365260?text=Estoy%20interesado%20en%20una%20demo%20del%20producto"
+                        class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                                fill="currentColor" />
+                        </svg>
+                        Contactar por WhatsApp
+                    </a>
+                </div>
+                <div class="demo-form-container">
+                    <form id="demoForm" class="demo-form" action="https://api.web3forms.com/submit" method="POST"
+                        novalidate>
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="cbc87930-ddf4-47d3-9d2a-d54eeae03ed0">
+                        <input type="hidden" name="subject" value="GestGym">
+                        <input type="hidden" name="from_name" value="GestGym Posible Cliente">
+                        <input type="hidden" name="redirect" value="false">
+
+                        <div class="form-group">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="nombre_completo" required aria-required="true">
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">País</label>
+                            <select id="country" name="pais" required aria-required="true">
+                                <option value="">Seleccionar</option>
+                                <option value="ARGENTINA">Argentina</option>
+                                <option value="CHILE">Chile</option>
+                                <option value="COLOMBIA">Colombia</option>
+                                <option value="MEXICO">México</option>
+                                <option value="PERU">Perú</option>
+                                <option value="URUGUAY">Uruguay</option>
+                                <option value="OTHER">Otro</option>
+                            </select>
+                            <span class="error-message" id="countryError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Tu rol</label>
+                            <select id="role" name="Tu rol" required aria-required="true">
+                                <option value="">Seleccionar</option>
+                                <option value="dueño">Dueño</option>
+                                <option value="administrador">Administrador</option>
+                                <option value="supervisor">Supervisor</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <span class="error-message" id="roleError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="gymSize">Tamaño del gimnasio</label>
+                            <select id="gymSize" name="Tamaño GYM" required aria-required="true">
+                                <option value="">Seleccionar</option>
+                                <option value="100">Pequeño (menos de 100 socios)</option>
+                                <option value="500">Mediano (100-500 socios)</option>
+                                <option value="+500">Grande (más de 500 socios)</option>
+                                <option value="cadena">Cadena (múltiples sedes)</option>
+                            </select>
+                            <span class="error-message" id="gymSizeError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje (opcional)</label>
+                            <textarea id="message" name="message" rows="3"
+                                placeholder="Contanos qué necesitás..."></textarea>
+                        </div>
+                        <input type="hidden" id="selectedPlan" name="plan_seleccionado" value="">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Agendar demo</button>
+                        <p class="form-note">Nos contactaremos en menos de 24 horas</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-brand" aria-label="GestGym">
+                        <img src="logo-192.png" alt="Logo GestGym" class="footer-logo-image">
+                    </div>
+                    <p class="footer-description">Sistema integral de gestión para gimnasios. Todo lo que necesitás en
+                        un solo lugar.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Producto</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Características</a></li>
+                        <li><a href="#modules">Módulos</a></li>
+                        <li><a href="#pricing">Precios</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#testimonials">Testimonios</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contacto</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:wpiedrabuena@gmail.com">wpiedrabuena@gmail.com</a></li>
+                        <li><a href="tel:+541131365260">+54 11 3136-5260</a></li>
+                        <li>Buenos Aires, Argentina</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GestGym. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-button" id="chatButton" aria-label="Abrir chat">
+            <svg class="chat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <svg class="chat-close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="chat-panel" id="chatPanel">
+            <div class="chat-header">
+                <h3>Chat con GestGym</h3>
+                <button class="chat-close-btn" id="chatCloseBtn" aria-label="Cerrar chat">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot-message">
+                    <div class="message-content">¡Hola! 👋 Soy el asistente de GestGym. ¿En qué puedo ayudarte?</div>
+                </div>
+            </div>
+            <div class="chat-typing" id="chatTyping" style="display: none;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Escribe tu pregunta..."
+                    aria-label="Escribe tu mensaje">
+                <button class="chat-send-btn" id="chatSendBtn" aria-label="Enviar mensaje">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="pricingPlans.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
